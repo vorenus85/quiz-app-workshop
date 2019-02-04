@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "question": "Ki NEM játszotta el sohasem Batman szerepét?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Michael Keaton"
+      },
+      {
+        "id": 2,
+        "item": "Christian Bale"
+      },
+      {
+        "id": 3,
+        "item": "Henry Cavill"
+      },
+      {
+        "id": 4,
+        "item": "Adam West"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 2,
+    "question": "Melyik filmben hangzott el a következő mondat: <b>\"Te mondd, hogy rablótámadás, a te hangod mélyebb!\"</b>",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Bűnvadászok"
+      },
+      {
+        "id": 2,
+        "item": "Star Wars"
+      },
+      {
+        "id": 3,
+        "item": "Nincs kettő négy nélkül"
+      },
+      {
+        "id": 4,
+        "item": "Forrest Gump"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "question": "Melyik filmben hallható a következő mondat: <b>Expecto Patronum<b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Star Trek"
+      },
+      {
+        "id": 2,
+        "item": "Én a vizilovakkal vagyok"
+      },
+      {
+        "id": 3,
+        "item": "Matrix"
+      },
+      {
+        "id": 4,
+        "item": "Harry Potter"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 4,
+    "question": "Kik a <b>klingonok</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Az ágyi poloska latin neve"
+      },
+      {
+        "id": 2,
+        "item": "Afrikai népcsoport"
+      },
+      {
+        "id": 3,
+        "item": "Mitológia lények akik a kihullott fogakért cserébe ajándékot hoznak a gyerekeknek"
+      },
+      {
+        "id": 4,
+        "item": "Egy kitalált faj akik a Star Trekben szerepelnek"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 5,
+    "question": "Melyik filmben <b>NEM szerepelt</b> Sandra Bullock?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "A szív bajnokai"
+      },
+      {
+        "id": 2,
+        "item": "Családi üzelmek"
+      },
+      {
+        "id": 3,
+        "item": "Női szervek"
+      },
+      {
+        "id": 4,
+        "item": "Féktelenül"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "question": "Hogy hívták a Star Warsban az uralkodót?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Londo Mollari"
+      },
+      {
+        "id": 2,
+        "item": "Marty McFly"
+      },
+      {
+        "id": 3,
+        "item": "Sheev Palpatine"
+      },
+      {
+        "id": 4,
+        "item": "William Adama"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 7,
+    "question": "Melyik 1997-es filmben szerepletek együtt a következő szinészek: Nicolas Cage, John Cusack, és John Malkovich?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "A vasállarcos"
+      },
+      {
+        "id": 2,
+        "item": "Szikla"
+      },
+      {
+        "id": 3,
+        "item": "Con Air"
+      },
+      {
+        "id": 4,
+        "item": "Az őrület határán"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 8,
+    "question": "Az <b>Aladdin</b> című Disney rajzfilmben, hogy hívták a majmot?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Bubu"
+      },
+      {
+        "id": 2,
+        "item": "Abu"
+      },
+      {
+        "id": 3,
+        "item": "Aldo"
+      },
+      {
+        "id": 4,
+        "item": "Bobo"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "question": "Hogy hívják a Jhonny Depp által megformált kalóz karaktert?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Will Turner"
+      },
+      {
+        "id": 2,
+        "item": "Jack Sparrow"
+      },
+      {
+        "id": 3,
+        "item": "James Norrington"
+      },
+      {
+        "id": 4,
+        "item": "Hector Barbossa"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "Melyik rajzfilmben hangzik el a <b>Hakuna Matata</b> dal?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Aladdin"
+      },
+      {
+        "id": 2,
+        "item": "A jungel könyve"
+      },
+      {
+        "id": 3,
+        "item": "Az Oroszlánykirály"
+      },
+      {
+        "id": 4,
+        "item": "Pocahontas"
+      }
+    ],
+    "correct": 3
+  }
+]

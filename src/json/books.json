@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "question": "A Harry Potter könyvekben hogy hívták az igazgatót?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Albus Dumbledore"
+      },
+      {
+        "id": 2,
+        "item": "Perselus Piton"
+      },
+      {
+        "id": 3,
+        "item": "Rubeus Hagrid"
+      },
+      {
+        "id": 4,
+        "item": "Argus Frics"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Ki a szerzője a <b>Tom Sawyer</b> című könyvnek?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Leo Tolsztoj"
+      },
+      {
+        "id": 2,
+        "item": "William Shakespeare"
+      },
+      {
+        "id": 3,
+        "item": "Mark Twain"
+      },
+      {
+        "id": 4,
+        "item": "John Ruskin"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 3,
+    "question": "A következő írók közül ki NEM írt krimiket?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "George Simenon"
+      },
+      {
+        "id": 2,
+        "item": "George Bernard Shaw"
+      },
+      {
+        "id": 3,
+        "item": "Arthur Conan Doyle"
+      },
+      {
+        "id": 4,
+        "item": "Agatha Christie"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Ki írta a <b>Büszkeség és balítélet</b> című könyvet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Virginia Woolf"
+      },
+      {
+        "id": 2,
+        "item": "Jane Austen"
+      },
+      {
+        "id": 3,
+        "item": "Lev Tolsztoj"
+      },
+      {
+        "id": 4,
+        "item": "Charles Dickens"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 5,
+    "question": "Herman Melville művében ki vagy mi Mobby Dick?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Egy félszemű kalóz"
+      },
+      {
+        "id": 2,
+        "item": "Egy londoni nyomornegyed neve"
+      },
+      {
+        "id": 3,
+        "item": "Egy fehér bálna"
+      },
+      {
+        "id": 4,
+        "item": "Egy homokkő képződmény neve az arizonai sivatagban"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "question": "Ki az aki <b>NEM szerepel</b> a Pál utcai fiúkban?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Boka"
+      },
+      {
+        "id": 2,
+        "item": "Tutajos"
+      },
+      {
+        "id": 3,
+        "item": "Nemecsek"
+      },
+      {
+        "id": 4,
+        "item": "Csónakos"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Hogy hívták az Egri csillagokban a cigányt?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Lorem"
+      },
+      {
+        "id": 2,
+        "item": "Lajkó"
+      },
+      {
+        "id": 3,
+        "item": "Köböl Pista"
+      },
+      {
+        "id": 4,
+        "item": "Sárközi"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 8,
+    "question": "Lorem ipsum dolor sit amet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Lorem"
+      },
+      {
+        "id": 2,
+        "item": "Dolor"
+      },
+      {
+        "id": 3,
+        "item": "Sit"
+      },
+      {
+        "id": 4,
+        "item": "Amet"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 9,
+    "question": "Lorem ipsum dolor sit amet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Lorem"
+      },
+      {
+        "id": 2,
+        "item": "Dolor"
+      },
+      {
+        "id": 3,
+        "item": "Sit"
+      },
+      {
+        "id": 4,
+        "item": "Amet"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "Lorem ipsum dolor sit amet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Lorem"
+      },
+      {
+        "id": 2,
+        "item": "Dolor"
+      },
+      {
+        "id": 3,
+        "item": "Sit"
+      },
+      {
+        "id": 4,
+        "item": "Amet"
+      }
+    ],
+    "correct": 3
+  }
+]

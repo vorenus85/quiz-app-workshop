@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "question": "Mikor haltak ki a dinoszauruszok?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "65 millió éve"
+      },
+      {
+        "id": 2,
+        "item": "250 millió éve"
+      },
+      {
+        "id": 3,
+        "item": "50.000 éve"
+      },
+      {
+        "id": 4,
+        "item": "Dehát még mindig élnek..."
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Milyen kémia elemből készítik a <b>mikrochippeket</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Alumínium"
+      },
+      {
+        "id": 2,
+        "item": "Duracel"
+      },
+      {
+        "id": 3,
+        "item": "Szilicium"
+      },
+      {
+        "id": 4,
+        "item": "Szén"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 3,
+    "question": "Fotoszintézis útján milyen anyagot termeknek a növények?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Protein"
+      },
+      {
+        "id": 2,
+        "item": "Glükóz"
+      },
+      {
+        "id": 3,
+        "item": "Lignin"
+      },
+      {
+        "id": 4,
+        "item": "Cellulóz"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Melyik gáz taláható a legnagyobb arányban a légkörben?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Nitrogén"
+      },
+      {
+        "id": 2,
+        "item": "Oxigén"
+      },
+      {
+        "id": 3,
+        "item": "Szén-dioxid"
+      },
+      {
+        "id": 4,
+        "item": "Argon"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "question": "Minek van kómája és csóvája?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Kisbolygók"
+      },
+      {
+        "id": 2,
+        "item": "Nap"
+      },
+      {
+        "id": 3,
+        "item": "Üstökös"
+      },
+      {
+        "id": 4,
+        "item": "Jupiter"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "question": "Mi az a növéttermesztési mód ahol talaj nélkül termesztik a növényeket?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Monokultúrás"
+      },
+      {
+        "id": 2,
+        "item": "Hidropónia"
+      },
+      {
+        "id": 3,
+        "item": "Öntözéses"
+      },
+      {
+        "id": 4,
+        "item": "Talajváltó"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Napjaink elektromos eszközei váltakozó árammal működnek, ki találta fel ezt a technológiát?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Puskás Tivadar"
+      },
+      {
+        "id": 2,
+        "item": "Wilhelm Röntgen"
+      },
+      {
+        "id": 3,
+        "item": "Thomas Alva Edison"
+      },
+      {
+        "id": 4,
+        "item": "Nikola Tesla"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 8,
+    "question": "Hogy hívjuk a 90°-nál nagyobb, de 180°-nál kisebb szöget?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Hegyesszög"
+      },
+      {
+        "id": 2,
+        "item": "Konkáv szög"
+      },
+      {
+        "id": 3,
+        "item": "Tompaszög"
+      },
+      {
+        "id": 4,
+        "item": "Derékszög"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 9,
+    "question": "Az alábbiak közül melyik <b>NEM magmás kőzet</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Bazalt"
+      },
+      {
+        "id": 2,
+        "item": "Dolomit"
+      },
+      {
+        "id": 3,
+        "item": "Riolit"
+      },
+      {
+        "id": 4,
+        "item": "Obszidián"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "Milyen állat a <b>lamantin</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Énekes madár"
+      },
+      {
+        "id": 2,
+        "item": "Brakkvízi halfaj"
+      },
+      {
+        "id": 3,
+        "item": "Tengeri emlős"
+      },
+      {
+        "id": 4,
+        "item": "Sivatagi kígyófajta"
+      }
+    ],
+    "correct": 3
+  }
+]

@@ -1,0 +1,255 @@
+[
+  {
+    "id": 1,
+    "question": "Melyik birodalom katonái voltak a <b>Vöröskabátosok</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Britt birodalom"
+      },
+      {
+        "id": 2,
+        "item": "Római birodalom"
+      },
+      {
+        "id": 3,
+        "item": "Német-Római birodalom"
+      },
+      {
+        "id": 4,
+        "item": "Francia Császárság"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "question": "Hol éltek a <b>Maják</b>",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Dél-Amerika"
+      },
+      {
+        "id": 2,
+        "item": "Észak-Amerika"
+      },
+      {
+        "id": 3,
+        "item": "Közép-amerika"
+      },
+      {
+        "id": 4,
+        "item": "Ázsia"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 3,
+    "question": "Hol található az egykor hírhedt kalózsziget <b>Tortuga</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Földközi-tenger"
+      },
+      {
+        "id": 2,
+        "item": "Karib-tenger"
+      },
+      {
+        "id": 3,
+        "item": "Fekete-tenger"
+      },
+      {
+        "id": 4,
+        "item": "Vörös-tenger"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "question": "Hány <b>apostol</b> volt akiket Jézus tanítványaiknak kiválasztott és küldetést adott?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "10"
+      },
+      {
+        "id": 2,
+        "item": "12"
+      },
+      {
+        "id": 3,
+        "item": "8"
+      },
+      {
+        "id": 4,
+        "item": "7"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 5,
+    "question": "Milyen beceneve van Debrecennek?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Fények városa"
+      },
+      {
+        "id": 2,
+        "item": "Száztornyú város"
+      },
+      {
+        "id": 3,
+        "item": "Cívisváros"
+      },
+      {
+        "id": 4,
+        "item": "Az oroszlán városa"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "question": "Hogyan nevezték a rómaiak a meghódított tartományt?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "colonia"
+      },
+      {
+        "id": 2,
+        "item": "provincia"
+      },
+      {
+        "id": 3,
+        "item": "iugerum"
+      },
+      {
+        "id": 4,
+        "item": "Ager publicus"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "question": "Mely házak vetélkedtek egymással a <b>Rózsák háborúja</b> idején, Anglia trónjáért?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Lannister és Stark"
+      },
+      {
+        "id": 2,
+        "item": "Valois és Bourbon"
+      },
+      {
+        "id": 3,
+        "item": "Anjou és Plantagenêt"
+      },
+      {
+        "id": 4,
+        "item": "York és Lancaster"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 8,
+    "question": "Melyik ország ellen irányult a Disznó-öböl-beli partraszállás?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Haiti"
+      },
+      {
+        "id": 2,
+        "item": "Mexikó"
+      },
+      {
+        "id": 3,
+        "item": "Kuba"
+      },
+      {
+        "id": 4,
+        "item": "Grenada"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 9,
+    "question": "Melyik császár idején foglalták el a rómaiak Pannóniát?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Caesar"
+      },
+      {
+        "id": 2,
+        "item": "Augustus"
+      },
+      {
+        "id": 3,
+        "item": "Tiberius"
+      },
+      {
+        "id": 4,
+        "item": "Caligula"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 10,
+    "question": "Hol gyilkolták meg J.F.Kennedyt?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "New York"
+      },
+      {
+        "id": 2,
+        "item": "Los Angeles"
+      },
+      {
+        "id": 3,
+        "item": "Dallas"
+      },
+      {
+        "id": 4,
+        "item": "Washington"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 11,
+    "question": "Lorem ipsum dolor sit amet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Lorem"
+      },
+      {
+        "id": 2,
+        "item": "Dolor"
+      },
+      {
+        "id": 3,
+        "item": "Sit"
+      },
+      {
+        "id": 4,
+        "item": "Amet"
+      }
+    ],
+    "correct": 3
+  }
+]

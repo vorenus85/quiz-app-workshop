@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "You cheat, aren't you?!",
+    "gifs": [
+      {
+        "src": "rate_100/_1.gif"
+      },
+      {
+        "src": "rate_100/_2.gif"
+      },
+      {
+        "src": "rate_100/_3.gif"
+      }
+    ],
+    "rate": 100
+  },
+  {
+    "id": 2,
+    "title": "Unbelievable!",
+    "gifs": [
+      {
+        "src": "rate_80/_1.gif"
+      },
+      {
+        "src": "rate_80/_2.gif"
+      },
+      {
+        "src": "rate_80/_3.gif"
+      }
+    ],
+    "rate": 80
+  },
+  {
+    "id": 3,
+    "title": "Not bad!",
+    "gifs": [
+      {
+        "src": "rate_60/_1.gif"
+      },
+      {
+        "src": "rate_60/_2.gif"
+      },
+      {
+        "src": "rate_60/_3.gif"
+      }
+    ],
+    "rate": 60
+  },
+  {
+    "id": 4,
+    "title": "Hmmm intresting!",
+    "gifs": [
+      {
+        "src": "rate_40/_1.gif"
+      },
+      {
+        "src": "rate_40/_2.gif"
+      },
+      {
+        "src": "rate_40/_3.gif"
+      }
+    ],
+    "rate": 40
+  },
+  {
+    "id": 5,
+    "title": "It's sad",
+    "gifs": [
+      {
+        "src": "rate_20/_1.gif"
+      },
+      {
+        "src": "rate_20/_2.gif"
+      },
+      {
+        "src": "rate_20/_3.gif"
+      }
+    ],
+    "rate": 20
+  },
+  {
+    "id": 6,
+    "title": "It can't be worse...",
+    "gifs": [
+      {
+        "src": "rate_20/_1.gif"
+      },
+      {
+        "src": "rate_20/_2.gif"
+      },
+      {
+        "src": "rate_20/_3.gif"
+      }
+    ],
+    "rate": 0
+  }
+]
