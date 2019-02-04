@@ -23,15 +23,6 @@ Illetve az elért teljesítményhez a vicces kísérőszövegek és az animáci�
 ## Assets
 A rate_0, rate_20, rate_40, rate_60, rate_80, rate_100 mappákban találhatóak az animációk gif fájljai.
 
-### Step 0
-- Telepítettünk egy vue-webpack-boilerplate a következő leírás alapján:
-https://github.com/vuejs-templates/webpack
-- Installáltuk a bootstrapet és a node-sass-t:
-https://medium.com/@BjornKrols/integrating-and-customising-bootstrap-4-in-vue-js-cbc29ba7688e
-
-
-
-
 #### Build Setup
 
 ``` bash

@@ -1,64 +1,29 @@
 <template>
-  <div id="app">
+  <div>
     <div class="container">
-      <div style="margin-top: 2rem; padding-bottom: 1rem;"><h1>Make Bootstrap Sexy Again</h1></div>
-      <!-- Alerts -->
-      <h2>Alerts</h2>
-      <div style="padding: 1rem;">
-        <div v-for="brand in ['success', 'info', 'warning', 'danger']" class="alert" :class="'alert-' + brand" :key="brand">
-          <strong>Well done!</strong> You successfully read this {{brand}} alert message.
-        </div>
-      </div>
-      <h2>Breadcrumb</h2>
-      <div style="padding: 1rem;">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active">Data</li>
-        </ol>
-      </div>
-      <!-- Buttons-->
-      <h2>Buttons</h2>
-      <div style="padding: 1rem;">
-        <div v-for="type in ['', 'outline']" :key="type">
-          <span v-for="brand in ['primary', 'secondary', 'success', 'info', 'warning', 'danger']" :key="brand">
-            <button role="button" class="btn" :class="'btn-' + (type.length ? (type + '-') : '') + brand" style="margin-bottom: 1rem; margin-right: 1rem;">{{brand}} {{type}}</button>
-          </span>
-        </div>
-      </div>
-      <!-- Progress-->
-      <h2>Progress</h2>
-      <div style="padding: 1rem;">
-        <div v-for="brand in ['success', 'info', 'warning', 'danger']" :key="brand" class="progress" style='margin-bottom: 1rem;'>
-          <div class="progress-bar" :class="'bg-' + brand" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-      <!-- Notice-->
-      <h2>Modal</h2>
-      <div style="padding: 1rem;">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Save changes</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+      <div class="row">
+        <div class="col-md-12 mt-5">
+          <div id="choose-category" v-if="selectedCategoryId === 0">
+            <h1>Choose category</h1>
+            <button
+              v-for="category in categories"
+              :class="['btn m-2 btn-' + category.color]"
+              @click="getCategory(category.id,category.name)"
+              :key="category.id">
+              {{ category.name }}
+            </button>
           </div>
-        </div>
-      </div>
-      <!-- Spacing utilities-->
-      <h2>Spacing utilities</h2>
-      <div style="padding: 1rem;">
-        <div v-for="brand in ['success', 'info', 'warning', 'danger']" :key="brand" class="progress" style='margin-bottom: 1rem;'>
-          <div class="progress-bar" :class="'bg-' + brand" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <div id="questions" v-else>
+            <h4>Choosen category: {{selectedCategoryName}}</h4>
+            <h4>Choosen id: {{selectedCategoryId}}</h4>
+          </div>
+          <div class="m-2">
+            <button
+              @click="resetCategory()"
+              class="btn btn-danger m-3">
+              Reset Quiz
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -66,11 +31,60 @@
 </template>
 
 <script>
+import booksJson from '../json/books.json'
+import gastronomyJson from '../json/gastronomy.json'
+import historyJson from '../json/history.json'
+import moviesJson from '../json/movies.json'
+import scienceJson from '../json/science.json'
 export default {
   name: 'Main',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      questionScience: scienceJson,
+      questionHistory: historyJson,
+      questionGastronomy: gastronomyJson,
+      questionMovies: moviesJson,
+      questionBooks: booksJson,
+      categories: [
+        {
+          id: 1,
+          name: 'Science and technology',
+          color: 'primary'
+        },
+        {
+          id: 2,
+          name: 'History',
+          color: 'info'
+        },
+        {
+          id: 3,
+          name: 'Gastronomy',
+          color: 'warning'
+        },
+        {
+          id: 4,
+          name: 'Movies',
+          color: 'success'
+        },
+        {
+          id: 5,
+          name: 'Books',
+          color: 'danger'
+        }
+      ],
+      selectedCategoryName: '',
+      selectedCategoryId: 0
+    }
+  },
+  methods: {
+    getCategory: function (id, name) {
+      console.log(id, name)
+      this.selectedCategoryId = id
+      this.selectedCategoryName = name
+    },
+    resetCategory: function () {
+      this.selectedCategoryName = ''
+      this.selectedCategoryId = 0
     }
   }
 }
