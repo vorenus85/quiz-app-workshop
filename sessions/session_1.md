@@ -1,5 +1,5 @@
-### Step 1
-<b>Írassuk ki az 5 témakört, bármelyik kategóiára kattintva jelenjem meg hogy mely kategóriát választottuk ki, a kategória neve alatt pedig jelenjen meg 5 random kérdés egy tömb elemeiként, elég ai indexeket megjeleníteni </b>
+### Session 1
+<b>Írassuk ki az 5 témakört, bármelyik kategóiára kattintva jelenjen meg, hogy mely kategóriát választottuk ki</b>
 
 <b>1.1.</b> A Main.vue script részében importáljuk be a kategóriák json fájljait:
 

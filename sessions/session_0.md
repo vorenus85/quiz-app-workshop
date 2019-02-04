@@ -1,4 +1,4 @@
-### Step 0
+### Session 0
 - Telepítettünk egy vue-webpack-boilerplate a következő leírás alapján:
 https://github.com/vuejs-templates/webpack
 - Installáltuk a bootstrapet és a node-sass-t:
