@@ -10,10 +10,20 @@
 - Állítható legyen hány kérdésből válasszuk ki a random kérdéseket a játékhoz
 - Állítható legyen hány kérdést kapjunk a játék során
 - A válaszadásra maximum 20 másodpercünk legyen, ezután ne lehessen választ adni
+- Csak egy helyes válasz van
+- Egyszer lehessen csak tippelni kérdésenként
 - Legyen egy progress bar ahol láthatjuk, hogy haladunk (true-tip, false-tip, skip-tip) 
-- A játék végén százalákosan láthassuk az eredményt, + egy-egy visses kisérőszöveg és animáció jelenjen meg a teljesítménytől függően
+- A játék végén százalákosan láthassuk az eredményt, + egy-egy vicces kisérőszöveg és animáció jelenjen meg a teljesítménytől függően
 
-## Step 0
+## Json mappa
+Ebben a mappában találhatóak az egyes kategóriák (books.json, gastronomy.json, history.json, movies.json, science.json), és azok kérdései.
+
+Illetve az elért teljesítményhez a vicces kísérőszövegek és az animációk elérési útjai (result.json).
+
+## Assets
+A rate_0, rate_20, rate_40, rate_60, rate_80, rate_100 mappákban találhatóak az animációk gif fájljai.
+
+### Step 0
 - Telepítettünk egy vue-webpack-boilerplate a következő leírás alapján:
 https://github.com/vuejs-templates/webpack
 - Installáltuk a bootstrapet és a node-sass-t:
@@ -22,7 +32,7 @@ https://medium.com/@BjornKrols/integrating-and-customising-bootstrap-4-in-vue-js
 
 
 
-### Build Setup
+#### Build Setup
 
 ``` bash
 # install dependencies
