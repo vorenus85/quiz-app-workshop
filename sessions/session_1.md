@@ -1,5 +1,5 @@
 ### Session 1
-<b>Írassuk ki az 5 témakört, bármelyik kategóiára kattintva jelenjen meg, hogy mely kategóriát választottuk ki</b>
+<b>Írassuk ki az 5 témakört, bármelyik kategóriára kattintva jelenjen meg, hogy mely kategóriát választottuk ki</b>
 
 <b>1.1.</b> A Main.vue script részében importáljuk be a kategóriák json fájljait:
 
