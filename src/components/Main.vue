@@ -27,7 +27,9 @@
                     <li
                       class="text-left mb-3 d-flex align-items-center"
                       v-for="(answer, i) in possAnswers"
-                      :key="answer.id">{{i+1}}. {{answer.item}}
+                      :class="answerValidation(answer.id)"
+                      :key="answer.id">
+                      <span class="question-checkbox mr-3" @click="getUserTip(answer.id)"></span>{{i+1}}. {{answer.item}}
                     </li>
                   </ul>
                 </div>
@@ -103,7 +105,8 @@ export default {
       randomQuestionsArr: [],
       actQuestion: '',
       possAnswers: [],
-      correctAnswer: ''
+      correctAnswer: '',
+      userTip: undefined
     }
   },
   methods: {
@@ -127,7 +130,11 @@ export default {
       }
       this.randomQuestionsArr = arr
     },
+    answerValidation (answerId) {
+      return this.userTip === answerId ? (this.userTip === this.correctAnswer ? 'correct' : 'wrong') : ''
+    },
     questionHandler: function () {
+      this.userTip = undefined
       let questionId = this.randomQuestionsArr.pop()
       if (questionId !== undefined) {
         this.getQuestionByCategory(this.selectedCategoryId, questionId)
@@ -174,7 +181,38 @@ export default {
           id: questionJson[questionId]['answers'][i]['id']})
       }
       this.correctAnswer = questionJson[questionId]['correct']
+    },
+    getUserTip: function (answerId) {
+      this.setUserTip(answerId)
+    },
+    setUserTip: function (tip) {
+      if (this.userTip === undefined) { // to prevent secong tip chance
+        this.userTip = tip
+      }
     }
   }
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+  @import '../scss/variables';
+  .question {
+    &-checkbox {
+      width: 50px;
+      height: 50px;
+      background: $gray-light;
+      border-radius: 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  .wrong .question-checkbox{
+    background: $red;
+  }
+
+  .correct .question-checkbox{
+    background: $green;
+  }
+</style>
