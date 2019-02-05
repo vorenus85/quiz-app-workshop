@@ -17,6 +17,13 @@
             <h4>Choosen category: {{selectedCategoryName}}</h4>
             <h4>Choosen id: {{selectedCategoryId}}</h4>
             <div>{{randomQuestionsArr}}</div>
+            <div class="question-progressbar d-flex mt-3 mb-3 justify-content-between align-items-center">
+              <span class="question-progressbar-item"
+                    v-for="(question, index) in questionForPlay"
+                    :class="progressBarValidation(userAnswers[index])"
+                    :key="question.id"
+              ></span>
+            </div>
             <div class="row">
               <div class="col-md-12">
                 <h2 v-html="actQuestion"></h2>
@@ -106,7 +113,8 @@ export default {
       actQuestion: '',
       possAnswers: [],
       correctAnswer: '',
-      userTip: undefined
+      userTip: undefined,
+      userAnswers: []
     }
   },
   methods: {
@@ -117,6 +125,7 @@ export default {
     resetCategory: function () {
       this.selectedCategoryName = ''
       this.selectedCategoryId = 0
+      this.userAnswers = []
       this.randomQuestionsArr = []
       this.actQuestion = ''
       this.possAnswers = []
@@ -130,12 +139,29 @@ export default {
       }
       this.randomQuestionsArr = arr
     },
-    answerValidation (answerId) {
+    answerValidation: function (answerId) {
       return this.userTip === answerId ? (this.userTip === this.correctAnswer ? 'correct' : 'wrong') : ''
     },
+    progressBarValidation: function (userAnswer) {
+      return userAnswer !== undefined ? (userAnswer === 'null' ? 'user-tip-skip' : (userAnswer === 'true' ? 'user-tip-true' : 'user-tip-false')) : ''
+    },
+    saveUserTip: function () {
+      if (this.userTip === undefined) { // if user not choose any tip
+        this.userAnswers.push('null')
+      } else {
+        if (this.userTip === this.correctAnswer) {
+          this.userAnswers.push('true')
+        } else {
+          this.userAnswers.push('false')
+        }
+      }
+    },
     questionHandler: function () {
-      this.userTip = undefined
-      let questionId = this.randomQuestionsArr.pop()
+      let questionId = this.randomQuestionsArr.pop() // next question
+      if (this.randomQuestionsArr.length + 1 < this.questionForPlay) {
+        this.saveUserTip()
+      }
+      this.userTip = undefined // reset userTip
       if (questionId !== undefined) {
         this.getQuestionByCategory(this.selectedCategoryId, questionId)
       } else {
@@ -214,5 +240,47 @@ export default {
 
   .correct .question-checkbox{
     background: $green;
+  }
+
+  .question-progressbar {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+
+    &-item {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background: $gray-lighter;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+      position: relative;
+      z-index: 2;
+      font-size: 12px;
+    }
+
+    &:before {
+      content: '';
+      background: $gray-light;
+      width: 100%;
+      height: 1px;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .user-tip {
+      &-skip {
+        background: $gray;
+        color: $white;
+      }
+      &-true {
+        background: $green;
+        color: $white;
+      }
+      &-false {
+        background: $red;
+        color: $white;
+      }
+    }
   }
 </style>
