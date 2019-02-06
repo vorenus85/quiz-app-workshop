@@ -1,232 +1,462 @@
 [
   {
     "id": 1,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Mi a grenadírmars ismertebb neve?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "KÁposztás tészta"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Krumplis tészta"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Sajtos tészta"
       },
       {
         "id": 4,
-        "item": "Amet"
-      }
-    ],
-    "correct": 1
-  },
-  {
-    "id": 2,
-    "question": "Lorem ipsum dolor sit amet?",
-    "answers": [
-      {
-        "id": 1,
-        "item": "Lorem"
-      },
-      {
-        "id": 2,
-        "item": "Dolor"
-      },
-      {
-        "id": 3,
-        "item": "Sit"
-      },
-      {
-        "id": 4,
-        "item": "Amet"
-      }
-    ],
-    "correct": 1
-  },
-  {
-    "id": 3,
-    "question": "Lorem ipsum dolor sit amet?",
-    "answers": [
-      {
-        "id": 1,
-        "item": "Lorem"
-      },
-      {
-        "id": 2,
-        "item": "Dolor"
-      },
-      {
-        "id": 3,
-        "item": "Sit"
-      },
-      {
-        "id": 4,
-        "item": "Amet"
+        "item": "Mákos tészta"
       }
     ],
     "correct": 2
   },
   {
-    "id": 4,
-    "question": "Lorem ipsum dolor sit amet?",
+    "id": 2,
+    "question": "Mit jelent a szusi szó?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Nyers hal"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Savanyú rizs"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Csípős szósz"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Kicsi tekercs"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "question": "Milyen a julienne sárgarépa?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Vékony hasábokra vágott"
+      },
+      {
+        "id": 2,
+        "item": "Forró zsírban hirtelen kisütött"
+      },
+      {
+        "id": 3,
+        "item": "Nyers"
+      },
+      {
+        "id": 4,
+        "item": "Leturmixolt"
       }
     ],
     "correct": 1
   },
   {
-    "id": 5,
-    "question": "Lorem ipsum dolor sit amet?",
+    "id": 4,
+    "question": "A chili con carne-ban a con carne azt jelenti, hogy...",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "hagymával"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "hússal"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "babbal"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "kukoricával"
       }
     ],
-    "correct": 3
+    "correct": 2
+  },
+  {
+    "id": 5,
+    "question": "A fondü szülőhazája...",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Svájc"
+      },
+      {
+        "id": 2,
+        "item": "Franciaország"
+      },
+      {
+        "id": 3,
+        "item": "Ausztria"
+      },
+      {
+        "id": 4,
+        "item": "Olaszország"
+      }
+    ],
+    "correct": 1
   },
   {
     "id": 6,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "A Carbonara spagettiben nincs...",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "szalonna"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "tészta"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "tojás"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "tejföl"
       }
     ],
     "correct": 2
   },
   {
     "id": 7,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "A salátát, amiben van dió, zeller, és alma, úgy hívják, hogy...",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Capri saláta"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Cézár saláta"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Ezersziget saláta"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Waldorf saláta"
       }
     ],
     "correct": 4
   },
   {
     "id": 8,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Az orosz céklalevest úgy hívják, hogy?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Pirog"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Zsurek"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Borscs"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Scsi"
       }
     ],
     "correct": 3
   },
   {
     "id": 9,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "A sült krumpli honnan származik?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Amerika"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Belgium"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Franciaország"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Németország"
       }
     ],
     "correct": 2
   },
   {
     "id": 10,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Miből készül a hummusz",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Padlizsánból"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Lencséből"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Csicseriborsóból"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Hajdinából"
       }
     ],
     "correct": 3
+  },
+  {
+    "id": 11,
+    "question": "A bacalhau egy Portugáliában kedvelt",
+    "answers": [
+      {
+        "id": 1,
+        "item": "olívabogyó"
+      },
+      {
+        "id": 2,
+        "item": "csirke"
+      },
+      {
+        "id": 3,
+        "item": "hal"
+      },
+      {
+        "id": 4,
+        "item": "bor"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "question": "A haggis nagyon népszerű étel",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Angliában"
+      },
+      {
+        "id": 2,
+        "item": "Írországban"
+      },
+      {
+        "id": 3,
+        "item": "Kanadában"
+      },
+      {
+        "id": 4,
+        "item": "Skóciában"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 13,
+    "question": "A Gong Bao (Kung Bao) nevű ételben nincs",
+    "answers": [
+      {
+        "id": 1,
+        "item": "mogyoró"
+      },
+      {
+        "id": 2,
+        "item": "hagyma"
+      },
+      {
+        "id": 3,
+        "item": "bab"
+      },
+      {
+        "id": 4,
+        "item": "csirke"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 14,
+    "question": "A francia marhapörkölt neve",
+    "answers": [
+      {
+        "id": 1,
+        "item": "cordon bleu"
+      },
+      {
+        "id": 2,
+        "item": "bouef bourguignon"
+      },
+      {
+        "id": 3,
+        "item": "foie gras"
+      },
+      {
+        "id": 4,
+        "item": "parmentier"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "A bhaji egy népszerű étel",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Indiában"
+      },
+      {
+        "id": 2,
+        "item": "Kínában"
+      },
+      {
+        "id": 3,
+        "item": "Vietnamban"
+      },
+      {
+        "id": 4,
+        "item": "Japánban"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "question": "Mi a lényeges különbség a csabai és a gyulai kolbász között az ízvilág szempontjából?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "a gyulaiban nincs bors"
+      },
+      {
+        "id": 2,
+        "item": "a gyulaiban nincs paprika"
+      },
+      {
+        "id": 3,
+        "item": "a csabaiban nincs bors"
+      },
+      {
+        "id": 4,
+        "item": "nincs különbség köztük"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 17,
+    "question": "Mi a krampampuli?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "kutyafajta"
+      },
+      {
+        "id": 2,
+        "item": "alkoholos ital"
+      },
+      {
+        "id": 3,
+        "item": "gombafajta"
+      },
+      {
+        "id": 4,
+        "item": "Dél-Amerikai gumós növény"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "question": "Melyik tájunk hagyományos étele a kukóleves?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Bakony"
+      },
+      {
+        "id": 2,
+        "item": "Vajdaság"
+      },
+      {
+        "id": 3,
+        "item": "Békés"
+      },
+      {
+        "id": 4,
+        "item": "Hajdúság"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 19,
+    "question": "Melyik bor fajta készül a kékszőlő fehérboros eljárással való feldolgozásával?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Vermuth"
+      },
+      {
+        "id": 2,
+        "item": "Rosé"
+      },
+      {
+        "id": 3,
+        "item": "Szamórodni"
+      },
+      {
+        "id": 4,
+        "item": "Cuvee"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "question": "Melyik alapanyag nem kell a Somlói galuskába?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Margarin"
+      },
+      {
+        "id": 2,
+        "item": "Kakaópor"
+      },
+      {
+        "id": 3,
+        "item": "Cukor"
+      },
+      {
+        "id": 4,
+        "item": "Tojás"
+      }
+    ],
+    "correct": 1
   }
 ]

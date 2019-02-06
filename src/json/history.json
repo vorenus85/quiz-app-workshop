@@ -231,25 +231,255 @@
   },
   {
     "id": 11,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Hol halt meg II. Rákóczi Ferenc?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Bécsben"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Rodostón"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Belgrádban"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Isztambulban"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "question": "Melyik királyunk nevéhez fűződik az Aranybulla kiadása?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "IV. Béla"
+      },
+      {
+        "id": 2,
+        "item": "II. András"
+      },
+      {
+        "id": 3,
+        "item": "V. István"
+      },
+      {
+        "id": 4,
+        "item": "II. Lajos"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 13,
+    "question": "Melyik nép hadserege használta a <b>testudo</b> hadrendet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "japán"
+      },
+      {
+        "id": 2,
+        "item": "kelta"
+      },
+      {
+        "id": 3,
+        "item": "római"
+      },
+      {
+        "id": 4,
+        "item": "hun"
       }
     ],
     "correct": 3
+  },
+  {
+    "id": 13,
+    "question": "Ki volt Szent Flórián?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "a tűzoltók védőszentje"
+      },
+      {
+        "id": 2,
+        "item": "a katonák védőszentje"
+      },
+      {
+        "id": 3,
+        "item": "az anyák védőszentje"
+      },
+      {
+        "id": 4,
+        "item": "a kovácsok védőszentje"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "question": "Mi a <b>kilt?</b>",
+    "answers": [
+      {
+        "id": 1,
+        "item": "római késfajta"
+      },
+      {
+        "id": 2,
+        "item": "belga tányér"
+      },
+      {
+        "id": 3,
+        "item": "hagyományos skót, térdig érő férfi szoknya."
+      },
+      {
+        "id": 4,
+        "item": "holland fapapucs"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "question": "Melyik két csapat között zajlott a verduni csata?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "török és magyar"
+      },
+      {
+        "id": 2,
+        "item": "angol és német"
+      },
+      {
+        "id": 3,
+        "item": "orosz és osztrák"
+      },
+      {
+        "id": 4,
+        "item": "német és francia"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 16,
+    "question": "Melyik háborúban volt a Barbadossa hadművelet?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "százéves háború"
+      },
+      {
+        "id": 2,
+        "item": "második világháború"
+      },
+      {
+        "id": 3,
+        "item": "első világháború"
+      },
+      {
+        "id": 4,
+        "item": "30 éves háború"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "question": "Ki nem a hét honfoglaló vezér egyike?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Előd"
+      },
+      {
+        "id": 2,
+        "item": "Tas"
+      },
+      {
+        "id": 3,
+        "item": "Kuka"
+      },
+      {
+        "id": 4,
+        "item": "Töhötöm"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "question": "Mikor történt az első holraszállás?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "1970. április 11."
+      },
+      {
+        "id": 2,
+        "item": "sose jártak a Holdon, és a Föld is lapos!"
+      },
+      {
+        "id": 3,
+        "item": "1969. július 20."
+      },
+      {
+        "id": 4,
+        "item": "1971. április 19."
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "question": "Kik voltak a hettiták?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Ókori anatóliai nép volt"
+      },
+      {
+        "id": 2,
+        "item": "gonosz manók a Gyűrűk urából"
+      },
+      {
+        "id": 3,
+        "item": "Népvándorláskori germán nép"
+      },
+      {
+        "id": 4,
+        "item": "Ókori észak-afrikai nép"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Mi volt a <b>gladius</b>?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "germán létra"
+      },
+      {
+        "id": 2,
+        "item": "német húspogácsa"
+      },
+      {
+        "id": 3,
+        "item": "görög fogpiszkáló"
+      },
+      {
+        "id": 4,
+        "item": "ókori római kard"
+      }
+    ],
+    "correct": 4
   }
 ]

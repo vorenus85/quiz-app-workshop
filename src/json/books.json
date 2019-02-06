@@ -162,69 +162,299 @@
   },
   {
     "id": 8,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Mit védenek meg a Pál utcai fiúk a vörösingesektől?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "A tubákot"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "A gittegyletet"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "A grundot"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "A Füvészkertet"
       }
     ],
     "correct": 3
   },
   {
     "id": 9,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Ki írta a <b>Piszkos Fred, a kapitány</b> című regényt?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Babits Mihály"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Rejtő Jenő"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Móra Ferenc"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Jókai Mór"
       }
     ],
     "correct": 2
   },
   {
     "id": 10,
-    "question": "Lorem ipsum dolor sit amet?",
+    "question": "Ki írta a <b>Nyomorultak</b> című regényt?",
     "answers": [
       {
         "id": 1,
-        "item": "Lorem"
+        "item": "Jules Verne"
       },
       {
         "id": 2,
-        "item": "Dolor"
+        "item": "Alexander Dumas"
       },
       {
         "id": 3,
-        "item": "Sit"
+        "item": "Victor Hugo"
       },
       {
         "id": 4,
-        "item": "Amet"
+        "item": "Jean Valjean"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 11,
+    "question": "Melyik mitológia lényei a párkák?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "római"
+      },
+      {
+        "id": 2,
+        "item": "sumér"
+      },
+      {
+        "id": 3,
+        "item": "görög"
+      },
+      {
+        "id": 4,
+        "item": "egyiptomi"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "question": "Ki nem vett részt a trójai háborúban?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Hektór"
+      },
+      {
+        "id": 2,
+        "item": "Pathroklosz"
+      },
+      {
+        "id": 3,
+        "item": "Odusszeus"
+      },
+      {
+        "id": 4,
+        "item": "Theseus"
+      }
+    ],
+    "correct": 4
+  },
+  {
+    "id": 13,
+    "question": "Hogy hívták János Vitézt a mű elején?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Kukorica Jancsi"
+      },
+      {
+        "id": 2,
+        "item": "Kukorica Jancsi"
+      },
+      {
+        "id": 3,
+        "item": "Kukorica Jancsi"
+      },
+      {
+        "id": 4,
+        "item": "Kedves Jancsi"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "question": "Hogy hívták Don Quijote lovát?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Rocinante"
+      },
+      {
+        "id": 2,
+        "item": "Sancho"
+      },
+      {
+        "id": 3,
+        "item": "Dulcinea"
+      },
+      {
+        "id": 4,
+        "item": "Amigo"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "question": "Kinek a műve a Háry János?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Bartók Béla"
+      },
+      {
+        "id": 2,
+        "item": "Kodály Zoltán"
+      },
+      {
+        "id": 3,
+        "item": "Liszt Ferenc"
+      },
+      {
+        "id": 4,
+        "item": "Kölcsei Ferenc"
+      }
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "question": "Melyk író álneve volt a P.Howard?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Bródy Sándor"
+      },
+      {
+        "id": 2,
+        "item": "Kosztolányi Dezső"
+      },
+      {
+        "id": 3,
+        "item": "Rejtő Jenő"
+      },
+      {
+        "id": 4,
+        "item": "Móra Ferenc"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 17,
+    "question": "Kinek a műve a Nemo kapitány?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Jules Verne"
+      },
+      {
+        "id": 2,
+        "item": "Emile Zola"
+      },
+      {
+        "id": 3,
+        "item": "Honore de Balzac"
+      },
+      {
+        "id": 4,
+        "item": "Victor Hugo"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "question": "Kinek a műve a Nemo kapitány?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Jules Verne"
+      },
+      {
+        "id": 2,
+        "item": "Emile Zola"
+      },
+      {
+        "id": 3,
+        "item": "Honore de Balzac"
+      },
+      {
+        "id": 4,
+        "item": "Victor Hugo"
+      }
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "question": "Kinek a regénye A Da Vinci-kód?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "Dan Brown"
+      },
+      {
+        "id": 2,
+        "item": "Mary Higgins Clark"
+      },
+      {
+        "id": 3,
+        "item": "James Fenimore Cooper"
+      },
+      {
+        "id": 4,
+        "item": "Andy Weir"
+      }
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "question": "Milyen labdajátékot űz Harry Potter?",
+    "answers": [
+      {
+        "id": 1,
+        "item": "kvaddics"
+      },
+      {
+        "id": 2,
+        "item": "karavics"
+      },
+      {
+        "id": 3,
+        "item": "kviddics"
+      },
+      {
+        "id": 4,
+        "item": "kikerics"
       }
     ],
     "correct": 3
