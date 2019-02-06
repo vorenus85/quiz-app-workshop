@@ -74,6 +74,19 @@
                   </ul>
                 </div>
               </div>
+              <div class="col-md-3">
+                <div class="progress-circle__container" v-if="userAnswers.length < questionForPlay">
+                  <span class="progress-circle__percent">{{ countDownTimer }}</span>
+                  <svg class="progress-circle" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="ProgressBar" transform="translate(-17.000000, -17.000000)">
+                        <circle id="Oval" stroke="#949494" stroke-width="5" fill-rule="nonzero" cx="70" cy="70" r="50"></circle>
+                        <path class="progress-circle__path" d="M70,120 C97.6142375,120 120,97.6142375 120,70 C120,42.3857625 97.6142375,20 70,20 C42.3857625,20 20,42.3857625 20,70 C20,97.6142375 42.3857625,120 70,120 Z" id="Oval-Copy" stroke-width="5" :stroke-dasharray="circle" fill-rule="nonzero" transform="translate(70.000000, 70.000000) rotate(-125.000000) translate(-70.000000, -70.000000) "></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
             <div class="m-2">
               <button
@@ -151,7 +164,19 @@ export default {
       questionPerCategoryMax: 20,
       questionPerCategoryMin: 10,
       questionForPlayMax: 10,
-      questionForPlayMin: 5
+      questionForPlayMin: 5,
+      countDownTimer: 20,
+      circlePercent: 0,
+      countDownSteppes: 20,
+      timerInterval: null,
+      counterState: false,
+      userCanAddTip: true,
+      userAddedTip: false
+    }
+  },
+  computed: {
+    circle () {
+      return ((this.circlePercent / 100) * 100 * Math.PI) + ',9999'
     }
   },
   methods: {
@@ -175,6 +200,35 @@ export default {
         this.questionForPlay--
       }
     },
+    stopTimer: function () {
+      this.counterState = false
+      this.userCanAddTip = false
+      this.userAddedTip = true
+      clearInterval(this.timerInterval)
+    },
+    resetTimer: function () {
+      clearInterval(this.timerInterval)
+      this.counterState = false
+      this.circlePercent = 0
+      this.countDownTimer = this.countDownSteppes
+    },
+    startTimer: function () {
+      this.countDown()
+      this.timerInterval = setInterval(this.countDown, 1000)
+    },
+    countDown: function () {
+      let n = this.countDownTimer
+      if (!this.counterState) {
+        this.counterState = true
+      } else if (n > 0) {
+        n = n - 1
+        this.countDownTimer = n
+        this.circlePercent = this.circlePercent + (100 / this.countDownSteppes)
+      } else {
+        this.resetTimer()
+        this.userCanAddTip = false
+      }
+    },
     getCategory: function (id, name) {
       this.selectedCategoryId = id
       this.selectedCategoryName = name
@@ -189,6 +243,7 @@ export default {
       this.correctAnswer = ''
       this.questionPerCategory = 10
       this.questionForPlay = 5
+      this.resetTimer()
     },
     getRandomQuestions: function () {
       let arr = []
@@ -205,18 +260,26 @@ export default {
       return userAnswer !== undefined ? (userAnswer === 'null' ? 'user-tip-skip' : (userAnswer === 'true' ? 'user-tip-true' : 'user-tip-false')) : ''
     },
     saveUserTip: function () {
-      if (this.userTip === undefined) { // if user not choose any tip
+      if (this.userAddedTip === false) {
         this.userAnswers.push('null')
       } else {
-        if (this.userTip === this.correctAnswer) {
-          this.userAnswers.push('true')
+        if (this.userTip === undefined) {
+          this.userAnswers.push('null')
         } else {
-          this.userAnswers.push('false')
+          if (this.userTip === this.correctAnswer) {
+            this.userAnswers.push('true')
+          } else {
+            this.userAnswers.push('false')
+          }
         }
       }
+      this.userCanAddTip = true
+      this.userAddedTip = false
     },
     questionHandler: function () {
       let questionId = this.randomQuestionsArr.pop() // next question
+      this.resetTimer()
+      this.startTimer()
       if (this.randomQuestionsArr.length + 1 < this.questionForPlay) {
         this.saveUserTip()
       }
@@ -269,10 +332,15 @@ export default {
     },
     getUserTip: function (answerId) {
       this.setUserTip(answerId)
+      this.stopTimer()
     },
     setUserTip: function (tip) {
-      if (this.userTip === undefined) { // to prevent secong tip chance
-        this.userTip = tip
+      if (this.userAddedTip === false) {
+        if (this.userCanAddTip === false) {
+          this.userTip = undefined
+        } else {
+          this.userTip = tip
+        }
       }
     }
   }
@@ -291,6 +359,31 @@ export default {
       display: inline-block;
       cursor: pointer;
     }
+  }
+
+  .progress-circle {
+    max-width:255px;
+    max-height:255px;
+    width:100%;
+    transform: scaleX(-1) rotate(-55deg);
+
+    &__percent {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+
+    &__container {
+      display:inline-block;
+      position:relative;
+    }
+
+    &__path {
+      transition: 0.5s ease-in-out all;
+      stroke: $green;
+    }
+
   }
 
   .settings-board {
