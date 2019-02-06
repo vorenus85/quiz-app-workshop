@@ -1,5 +1,5 @@
 ### Session 5
-
+<b>Feladat:</b>
 Készítsünk egy settings boardot az alkalmazáshoz. Ahol kiválaszthatjuk mennyi kérdésből kapjuk meg a random kérdéseket illetve hogy egy játék során hány kérdés jelenjen meg. 
 
 Itt a <b>v-model</b> direktívát fogjuk használni , ez által lesz lehetséges a <b>two-way data bindings</b>
@@ -7,7 +7,7 @@ Itt a <b>v-model</b> direktívát fogjuk használni , ez által lesz lehetséges
 
 Másoljuk a következő kódot a kategória választó gombok alá:
 
-```
+```html
 <h3 class="mt-3 mb-3">Quiz settings</h3>
 <div class="settings-board">
   <div class="form-group d-flex align-items-center">
@@ -45,7 +45,7 @@ Másoljuk a következő kódot a kategória választó gombok alá:
 
 Illesszük be a következő css-t:
 
-```angular2html
+```scss
 .settings-board {
   width: 400px;
   margin: 0 auto;
@@ -54,7 +54,7 @@ Illesszük be a következő css-t:
 
 Hozzunk létre a data objektumban négy új változót:
 
-```angular2html
+```javascript
 questionPerCategoryMax: 20,
 questionPerCategoryMin: 10,
 questionForPlayMax: 10,
@@ -63,7 +63,7 @@ questionForPlayMin: 5,
 
 Illesszük be lenti 4 methódust:
 
-```angular2html
+```javascript
 questionPerCategoryInc: function () {
   if (this.questionPerCategory <= this.questionPerCategoryMax - 1 && this.questionPerCategory >= this.questionPerCategoryMin - 1) {
     this.questionPerCategory++
@@ -87,7 +87,7 @@ questionForPlayDec: function () {
 ```
 
 Végül illesszük be a resetCAtegory() methódushoz a következő két sort:
-```angular2html
+```javascript
 this.questionPerCategory = 10
 this.questionForPlay = 5
 ```

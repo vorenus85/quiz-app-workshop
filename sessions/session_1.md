@@ -1,9 +1,12 @@
 ### Session 1
-<b>Írassuk ki az 5 témakört, bármelyik kategóriára kattintva jelenjen meg, hogy mely kategóriát választottuk ki</b>
+<b>Feladat:</b>
+Írassuk ki az 5 témakört, bármelyik kategóriára kattintva jelenjen meg, hogy mely kategóriát választottuk ki
+
+<hr>
 
 <b>1.1.</b> A Main.vue script részében importáljuk be a kategóriák json fájljait:
 
-```
+```javascript
 import booksJson from '../json/books.json'
 import gastronomyJson from '../json/gastronomy.json'
 import historyJson from '../json/history.json'
@@ -13,7 +16,7 @@ import scienceJson from '../json/science.json'
 
 <b>1.2.</b> A data objektumban tároljuk őket 1-1 változóban:
 
-```angular2html
+```javascript
 questionScience: scienceJson,
 questionHistory: historyJson,
 questionGastronomy: gastronomyJson,
@@ -25,7 +28,7 @@ questionBooks: booksJson,
 
 Ehhez a data objektumban hozzunk létre egy <b>categories</b> objektumot:
 
-```angular2html
+```javascript
 categories: [
     {
       id: 1,
@@ -57,7 +60,7 @@ categories: [
 
 <b>1.4.</b> A template részt töröljük ki teljesen, a helyére ezt a html tegyük be:
 
-```angular2html
+```html
 <template>
   <div>
     <div class="container">
@@ -76,7 +79,7 @@ categories: [
 <b>1.5.</b> For ciklussal jelenítsük meg a data objektumben deklarált categories objektum elemeit. Gombokként jelenjenek meg, a gombok színei az objektumban deklarált színek legyenek! Használjuk a key direktívát a for ciklushoz
 
 
-```angular2html
+```html
 <button
   v-for="category in categories"
   :class="['btn m-2 btn-' + category.color]"
@@ -89,14 +92,14 @@ categories: [
 
 Hozunk létre két változót a data objektumban <b>selectedCategoryName</b> és <b>selectedCategoryId</b> néven ezek lesznek az adott kategória neve és idje, a selectedCategoryName üres string legyen, a selectedCategoryId legyen 0-a
 
-```angular2html
+```javascript
 selectedCategoryName: '',
 selectedCategoryId: 0
 ```
 
 Hozzunk létre a methods objektumot a vue instance-ban azon belül pedig hozzunk létre egy getCategory() nevű függvényt, a fügvény 2 paramétert kapjon meg a kategória idjét és nevét
 
-```angular2html
+```javascript
 methods: {
   getCategory: function (id, name) {
     this.selectedCategoryName = name
@@ -107,13 +110,13 @@ methods: {
 
 Hozzuk létre a click eventet a gombokon
 
-```angular2html
+```javascript
 @click="getCategory(category.id,category.name)"
 ```
 
 A <b>choose-category</b> div alá hozzuk létre a következő divet, amiben megjelenítjük a kiválasztott kategóriát és annak id-jét
 
-```angular2html
+```html
 <div id="questions">
   <h4>Choosen category: {{selectedCategoryName}}</h4>
   <h4>Choosen id: {{selectedCategoryId}}</h4>
@@ -122,7 +125,7 @@ A <b>choose-category</b> div alá hozzuk létre a következő divet, amiben megj
 
 Oldjuk meg hogy van az 5 kategória gombja látszik vagy kiválaszott kategória neve és idje, <b>Conditional Rendering</b> -et  <b>v-if</b> és <b>v-else</b> 
 
-```angular2html
+```html
 <div id="choose-category" v-if="selectedCategoryId === 0">
 ...
 ...
@@ -137,7 +140,7 @@ Hozzuk létre egy gombot <b>Reset Quiz</b> néven amire kattintva reseteljük a 
 
 Hozzuk létre a gombok a template aljára
 
-```angular2html
+```html
 <div class="m-2">
   <button
     @click="resetCategory()"
@@ -149,7 +152,7 @@ Hozzuk létre a gombok a template aljára
 
 Ahogy láthatjuk ez is clickre eventre fog működni, ehhez hozzuk létre a resetCategory() methodust:
 
-```angular2html
+```javascript
 resetCategory: function () {
   this.selectedCategoryName = ''
   this.selectedCategoryId = 0

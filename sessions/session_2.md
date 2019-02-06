@@ -1,6 +1,9 @@
 ### Session 2
+<b>Feladat:</b>
 Rendom módon az adott kategória json fájl-jából válasszunk ki 5 kérdést és ezeket jelenítsük is meg. 
 Mindig random kérdések jelenjenek meg, kettő ugyanolyan sose!
+
+<hr>
 
 ```hint:```
 
@@ -15,7 +18,7 @@ Hozzunk létre a data objektumban három változót azt egyik legyen <b>question
 
 <b>randomQuestionsArr:</b> a random módon kiválaszott kérdések indexe
 
-```angular2html
+```javascript
 questionPerCategory: 10,
 questionForPlay: 5,
 randomQuestionsArr: [],
@@ -23,7 +26,7 @@ randomQuestionsArr: [],
 
 Hozzuk létre egy függvényt a method-okhoz, amely kiválaszt 5 random számot, egy 0-9-ig tartó intervallumból, két ugyanazt a számot nem választhatjuk ki!
 
-```angular2html
+```javascript
 getRandomQuestions: function () {
   let arr = []
   while (arr.length < this.questionForPlay) {
@@ -36,19 +39,19 @@ getRandomQuestions: function () {
 
 Ezt a függvényt iratkoztassuk fel a kategóriákra:
 
-```angular2html
+```html
 @click="getCategory(category.id,category.name),getRandomQuestions()"
 ```
 
 Jelenítsük meg a random számok tömbjét a <b>Reset quiz</b> gomb fölött:
 
-```angular2html
+```html
 <div>{{randomQuestionsArr}}</div>
 ```
 
 Oldjuk meg, hogy a <b>Reset quiz</b> gombra kattintva ennek a tömbnek a tartalma is törlődjön, egészítsük ki a <b>resetCategory()</b> függvényt a következő sorral: 
 
-```angular2html
+```javascript
 this.randomQuestionsArr = []
 ```
 
@@ -60,7 +63,7 @@ A rotációt úgy érjük el hogy a randomQuestionsArr,ből kivesszük az utols�
 Ez a gomb akkor jelenjen meg amikor már kiválasztottuk a kategóriát!
 
 
-```angular2html
+```html
 <div class="m-2">
   <button
     @click="questionHandler()"
@@ -70,7 +73,7 @@ Ez a gomb akkor jelenjen meg amikor már kiválasztottuk a kategóriát!
 </div>
 ```
 
-```angular2html
+```html
 questionHandler: function () {
   this.randomQuestionsArr.pop()
 }
@@ -82,7 +85,7 @@ Hozzunk létre egy függvényt amely képes arra hogy a kiválasztott kategória
 
 Módosítsuk a questionHandler() függvényt a következő képpen:
 
-```angular2html
+```javascript
 questionHandler: function () {
   let questionId = this.randomQuestionsArr.pop()
   if (questionId !== undefined) {
@@ -98,14 +101,14 @@ questionHandler: function () {
 Mint láthatjuk létre kell hoznunk egy függvényt ami kiolvassa az adott kategória json-jéből a kérdéseket, és ezeket majd tároljuk a <b>actQuestion</b> és a <b>possAnswers</b> változókban, ezek fognak majd megjelenni a templateben
 
 Deklaráljuk a két változót a data objektumban
-```angular2html
+```javascript
 actQuestion: '',
 possAnswers: []
 ```
 
 Hozzuk létre a getQuestionByCategory() methódust
 
-```angular2html
+```javascript
 getQuestionByCategory: function (categoryId, questionId) {
   let questionJson = []
   this.actQuestion = ''
@@ -148,7 +151,7 @@ getQuestionByCategory: function (categoryId, questionId) {
 
 A <b>correctAnswer</b> -t is deklaráljuk a data objektumban:
 
-```angular2html
+```javascript
 correctAnswer: '',
 ```
 
@@ -157,18 +160,18 @@ Nézzük meg a Vue devtoolsban, hogy az újonnan deklarált 3 változó kap-e é
 
 A resetCategory()-t egészítsük ki a következő 3 sorral:
 
-```angular2html
+```javascript
 this.actQuestion = ''
 this.possAnswers = []
 this.correctAnswer= ''
 ```
 Ezen sor alatt:
-```angular2html
+```html
 <div>{{randomQuestionsArr}}</div>
 ```
 Jelenítsük meg az aktuális kérdést a v-html direktíva segítségével:
 
-```angular2html
+```html
 <div class="col-md-12">
   <h2 v-html="actQuestion"></h2>
 </div>
@@ -176,7 +179,7 @@ Jelenítsük meg az aktuális kérdést a v-html direktíva segítségével:
 
 Jelenítsük meg az aktuális kérdés alatt a lehetséges 4 választ, v-for-t használjunk, jelenítsük is meg az indexeket!
 
-```angular2html
+```html
 <div class="question-block col-md-9">
   <div class="text-center">
     <ul style="width: 300px; display:inline-block;" class="mt-5">

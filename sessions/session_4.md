@@ -1,13 +1,13 @@
 ### Session 4
-
+<b>Feladat:</b>
 Készítsünk egy progress bart ahol nyomon követhetjük a haladásunkat. 
 Ez jelenítse meg összesen hány kérdés lesz a Kvíz során, jelenleg fixen 5. 
 Ha a játékos nem ad választ a kérdésre legyen a jelőlő fekete, ha helyes választ ad akkor zöld, ha helytelent akkor piron legyen a színe.
-
+<hr>
 
 Az aktuális kérdés felé illeszzük be a következő kódot, ez 5 db jelölőt fog megjeleníteni:
 
-```angular2html
+```html
 <div class="question-progressbar d-flex mt-3 mb-3 justify-content-between align-items-center">
   <span class="question-progressbar-item"
         v-for="(question) in questionForPlay"
@@ -17,7 +17,7 @@ Az aktuális kérdés felé illeszzük be a következő kódot, ez 5 db jelölő
 ```
 Illesszük be a css-ét is:
 
-```angular2html
+```scss
 .question-progressbar {
   position: relative;
   width: 500px;
@@ -63,14 +63,14 @@ Illesszük be a css-ét is:
 
 Hosszuk létre egy tömböt a data objektumban, amiben a játékos válaszait fogjuk tárolni:
 
-```
+```javascript
 userAnswers: [],
 ```
 
 Hozzuk létre a függvényt ami elmenti a válaszokat:
 
 
-```
+```javascript
 saveUserTip: function () {
   if (this.userTip === undefined) { // if user not choose any tip
     this.userAnswers.push('null')
@@ -87,7 +87,7 @@ saveUserTip: function () {
 A tippek akkor mentődjenek el a tömbbe amikor rotálunk a következő kérdésre, ezzel egy időben fog majd frissülni is a progressbar.
 Ennek megfelelően a <b>questionHandler()</b> függvényt módosítsük a következőképp:
 
-```angular2html
+```javascript
 questionHandler: function () {
   let questionId = this.randomQuestionsArr.pop() // next question
   if (this.randomQuestionsArr.length + 1 < this.questionForPlay) {
@@ -111,7 +111,7 @@ Ha helyesen bekerülnek akkor már csak szinezni kell a progressbarunkat, tehát
 
 A <b>question-progressbar-item</b> elemet egészítsük ki egy index nevű indexxel a v-for direktívánál. 
 Hozzuk létre a :class direktívát ahol a jelölőnégyzetekhez hasonlóan egy függvényhívás fogja visszaadni az elem "színét"
-```angular2html
+```html
 <span class="question-progressbar-item"
       v-for="(question, index) in questionForPlay"
       :class="progressBarValidation(userAnswers[index])"
@@ -121,7 +121,7 @@ Hozzuk létre a :class direktívát ahol a jelölőnégyzetekhez hasonlóan egy 
 
 A progressBarValidation methódus a kövtkező képpen nézzen ki:
 
-```angular2html
+```javascript
 progressBarValidation: function (userAnswer) {
   return userAnswer !== undefined ? (userAnswer === 'null' ? 'user-tip-skip' : (userAnswer === 'true' ? 'user-tip-true' : 'user-tip-false')) : ''
 }
