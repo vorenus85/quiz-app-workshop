@@ -18,6 +18,7 @@ export default {
 <style lang="scss">
   @import './scss/variables.scss';
   @import '../node_modules/bootstrap/scss/bootstrap.scss';
+  @import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css';
 </style>
 <style>
   #app {

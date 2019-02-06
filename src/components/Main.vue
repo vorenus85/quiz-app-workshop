@@ -92,7 +92,7 @@
               <button
                 @click="questionHandler()"
                 class="btn btn-info">
-                Show question
+                {{questionBtnText}}
               </button>
             </div>
             <div class="m-2">
@@ -102,6 +102,14 @@
                 Reset Quiz
               </button>
             </div>
+            <b-modal ref="myModalRef" hide-footer title="Your result">
+              <div class="d-block text-center">
+                <h3>{{resultTitle}}</h3>
+                <h4><strong>{{resultPercentage}}%</strong></h4>
+                <img class="img-fluid" :src="getIconPath(resultImgSrc)" alt="">
+              </div>
+              <b-btn class="mt-3" variant="outline-danger" @click="hideModal">Hide result</b-btn>
+            </b-modal>
           </div>
         </div>
       </div>
@@ -115,6 +123,7 @@ import gastronomyJson from '../json/gastronomy.json'
 import historyJson from '../json/history.json'
 import moviesJson from '../json/movies.json'
 import scienceJson from '../json/science.json'
+import resultJson from '../json/result.json'
 export default {
   name: 'Main',
   data () {
@@ -124,6 +133,7 @@ export default {
       questionGastronomy: gastronomyJson,
       questionMovies: moviesJson,
       questionBooks: booksJson,
+      resultCategories: resultJson,
       categories: [
         {
           id: 1,
@@ -171,12 +181,18 @@ export default {
       timerInterval: null,
       counterState: false,
       userCanAddTip: true,
-      userAddedTip: false
+      userAddedTip: false,
+      resultTitle: '',
+      resultImgSrc: '',
+      resultPercentage: 0
     }
   },
   computed: {
     circle () {
       return ((this.circlePercent / 100) * 100 * Math.PI) + ',9999'
+    },
+    questionBtnText () {
+      return this.userAnswers.length === this.questionForPlay ? 'Show my result!' : (this.randomQuestionsArr.length === this.questionForPlay ? 'Start Quiz!' : 'Next Question!')
     }
   },
   methods: {
@@ -277,20 +293,66 @@ export default {
       this.userAddedTip = false
     },
     questionHandler: function () {
-      let questionId = this.randomQuestionsArr.pop() // next question
-      this.resetTimer()
-      this.startTimer()
-      if (this.randomQuestionsArr.length + 1 < this.questionForPlay) {
-        this.saveUserTip()
-      }
-      this.userTip = undefined // reset userTip
-      if (questionId !== undefined) {
-        this.getQuestionByCategory(this.selectedCategoryId, questionId)
+      if (this.userAnswers.length !== this.questionForPlay) {
+        /* get question */
+        let questionId = this.randomQuestionsArr.pop()
+        this.resetTimer()
+        this.startTimer()
+        if (this.randomQuestionsArr.length + 1 < this.questionForPlay) {
+          this.saveUserTip()
+        }
+        this.userTip = undefined
+        if (questionId !== undefined) {
+          this.getQuestionByCategory(this.selectedCategoryId, questionId)
+        } else {
+          /* after last tip hide question and possAnswers */
+          this.actQuestion = ''
+          this.possAnswers = []
+        }
       } else {
-        /* after last tip hide question and possAnswers */
-        this.actQuestion = ''
-        this.possAnswers = []
+        this.calculateResult()
+        this.showModal()
       }
+    },
+    calculateResult: function () {
+      let countOfTrue = this.userAnswers.filter(x => x === 'true')
+      this.resultPercentage = Math.round((countOfTrue.length / this.questionForPlay) * 100)
+      let resultCategoriesJson = this.resultCategories
+      switch (true) {
+      case (this.resultPercentage === 100):
+        this.resultTitle = resultCategoriesJson[0]['title']
+        this.resultImgSrc = resultCategoriesJson[0]['gifs'][0]['src']
+        break
+      case (this.resultPercentage >= 80):
+        this.resultTitle = resultCategoriesJson[1]['title']
+        this.resultImgSrc = resultCategoriesJson[1]['gifs'][0]['src']
+        break
+      case (this.resultPercentage >= 60):
+        this.resultTitle = resultCategoriesJson[2]['title']
+        this.resultImgSrc = resultCategoriesJson[2]['gifs'][0]['src']
+        break
+      case (this.resultPercentage >= 40):
+        this.resultTitle = resultCategoriesJson[3]['title']
+        this.resultImgSrc = resultCategoriesJson[3]['gifs'][0]['src']
+        break
+      case (this.resultPercentage >= 20):
+        this.resultTitle = resultCategoriesJson[4]['title']
+        this.resultImgSrc = resultCategoriesJson[4]['gifs'][0]['src']
+        break
+      default:
+        this.resultTitle = resultCategoriesJson[5]['title']
+        this.resultImgSrc = resultCategoriesJson[5]['gifs'][0]['src']
+        break
+      }
+    },
+    showModal: function () {
+      this.$refs.myModalRef.show()
+    },
+    hideModal: function () {
+      this.$refs.myModalRef.hide()
+    },
+    getIconPath (iconName) {
+      return iconName ? require(`@/assets/${iconName}`) : ''
     },
     getQuestionByCategory: function (categoryId, questionId) {
       let questionJson = []
